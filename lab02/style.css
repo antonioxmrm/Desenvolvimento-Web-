@@ -1,0 +1,41 @@
+
+html{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+body{
+    background-color: rgb(245, 245, 245);
+    background-size: cover;
+    display: block;
+    text-align: left;
+    color:rgb(0, 0, 0);
+}
+
+p{
+    color:rgb(0, 0, 0);
+}
+
+h1{
+    font-weight:900;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+h2, h3, h4, h5, h6{
+    font-style: oblique;
+}
+
+header{
+    background-color: rgb(176, 176, 176);
+    color:rgb(0, 0, 68);
+}
+
+div{
+    border: 5px solid #000068;
+}
