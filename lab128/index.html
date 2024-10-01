@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>CONTATE-NOS</h1>
+        <form id="contactForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdHkFhOBn0PJYvapZoSV6utm3Iz8LzzaU6QiA_m9yPeyFIAwA/formResponse
+        " method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+            <div class="input-group">
+                <input type="text" name="entry.nome" placeholder="Enter your Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" name="entry.email" placeholder="Enter a valid email address" required>
+            </div>
+            <div class="input-group">
+                <textarea name="entry.mensagem" rows="4" placeholder="Enter your message" required></textarea>
+            </div>
+            <button type="submit">ENVIAR</button>
+        </form>
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
+        <p id="responseMessage" style="display:none;">Formulário enviado com sucesso!</p>
+    </div>
+
+    <script>
+        var submitted = false;
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            // Previne o comportamento padrão do formulário
+            event.preventDefault();
+            submitted = true;
+
+            // Exibir a mensagem de sucesso
+            document.getElementById('responseMessage').style.display = 'block';
+            document.getElementById('responseMessage').textContent = 'Formulário enviado com sucesso!';
+
+            // Limpa o formulário após o envio
+            this.reset();
+        });
+    </script>
+</body>
+</html>
